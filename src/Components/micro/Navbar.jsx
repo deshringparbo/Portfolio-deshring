@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Buttons from "../../elements/Buttons";
 
 const menulinks = [
   { name: "Home", path: "/" },
@@ -14,11 +15,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-gray-900 text-white fixed">
+    <nav className="w-full bg-transparent text-black fixed">
       {/* Top Bar */}
       <div className="px-6 py-4 flex items-center justify-between  md:px-42">
         {/* Logo */}
-        <div className="text-xl font-bold">Des.</div>
+        <div className="text-2xl font-bold font-serif">Des.</div>
 
         {/*  Desktop Menu  */}
         <div className="hidden md:flex gap-8">
@@ -32,22 +33,18 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <button
-         onClick={()=>{}} // need to add link to open
-        className="hidden lg:block bg-amber-50 text-black px-3 py-1 rounded-3xl hover:cursor-pointer hover:bg-gray-200  active:bg-gray-300">Lets Talk</button>
+
+        <Buttons name="Let's Talk" />
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-gray-800 flex flex-col items-center gap-6 py-6 transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-sky-200 flex flex-col items-center gap-6 py-6 transition-all duration-300 ${
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
@@ -69,4 +66,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
