@@ -15,9 +15,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-transparent text-black fixed">
+    <nav className="w-full bg-white/30 backdrop-blur z-10 text-black fixed">
       {/* Top Bar */}
-      <div className="px-6 py-4 flex items-center justify-between  md:px-42">
+      <div className="px-6 py-4 flex items-center justify-between  md:px-20 lg:px-52 ">
         {/* Logo */}
         <div className="text-2xl font-bold font-serif">Des.</div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-sky-200 flex flex-col items-center gap-6 py-6 transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0  w-full bg-sky-200 flex flex-col items-center gap-6 py-6 transition-all duration-300 ${
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
