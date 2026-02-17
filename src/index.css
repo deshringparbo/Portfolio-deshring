@@ -20,5 +20,21 @@ html {
 }
 
 .animate-slideUp {
-  animation: slideUp 0.8s ease-out forwards;
+  animation: slideUp 0.9s ease-out forwards;
 }
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+animate-slideIn {
+  animation: slideIn 0.9s ease-out forwards;
+}
+
+

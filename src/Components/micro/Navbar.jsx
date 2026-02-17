@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white/30 backdrop-blur z-10 text-black fixed">
+    <nav className="w-full bg-white/20 backdrop-blur z-10 text-black fixed">
       {/* Top Bar */}
       <div className="px-6 py-4 flex items-center justify-between  md:px-20 lg:px-52 ">
         {/* Logo */}
