@@ -25,12 +25,13 @@ const Hero = () => {
           Experiences
         </p>
         {/* links of the platform */}
-        <div className="md:w-3/5 px-6  flex items-center justify-center py-10 flex-col gap-6 border rounded-md animate-slideIn  ">
+        <div className="md:w-3/5 px-6  flex items-center justify-center py-10 flex-col gap-6 border rounded-md">
           <h3>Connect with me here - </h3>
           <div className="flex justify-center gap-6  py-3 px-3 flex-wrap ">
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href=""
+              target="_blank"
             >
               {" "}
               <Linkedin size={18} />
@@ -38,6 +39,7 @@ const Hero = () => {
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href=""
+              target="_blank"
             >
               {" "}
               <Github size={18} />
@@ -45,32 +47,41 @@ const Hero = () => {
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href=""
+              target="_blank"
             >
               <Facebook size={18} />
             </a>
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href="https://x.com/deshrocxi"
+              target="_blank"
             >
               <X size={18} />
             </a>
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href="https://www.instagram.com/deshringparbosa"
+              target="_blank"
             >
               <Instagram size={18} />
             </a>
             <a
               className="bg-gray-600 p-3 rounded-full hover:bg-gray-600"
               href=""
+              target="_blank"
             >
               <Youtube size={18} />
             </a>
-            <a href=""> </a>
+            <a href="" target="_blank">
+              {" "}
+            </a>
           </div>
         </div>
       </div>
-      <h1 className="pt-20"> <ArrowDown className="animate-bounce text-white h-12 w-12" /> </h1>
+      <h1 className="pt-20">
+        {" "}
+        <ArrowDown className="animate-bounce text-white h-12 w-12" />{" "}
+      </h1>
     </section>
   );
 };

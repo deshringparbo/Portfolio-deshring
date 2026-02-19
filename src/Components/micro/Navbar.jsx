@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 import Buttons from "../../elements/Buttons";
 
 const menulinks = [
-  { name: "Home", path: "/" },
-  { name: "Learning", path: "/learning" },
-  { name: "Projects", path: "/projects" },
-  { name: "About", path: "/about" },
-  { name: "Blogs", path: "/blogs" },
+  { name: "Home", href: "#herosection" },
+  { name: "Learning", href: "#learning" },
+  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
+  { name: "Blogs", href: "#blogs" },
 ];
 
 const Navbar = () => {
@@ -17,20 +17,20 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white/20 backdrop-blur z-10 text-black fixed">
       {/* Top Bar */}
-      <div className="px-6 py-4 flex items-center justify-between  md:px-20 lg:px-52 ">
+      <div className="px-6 py-3 flex items-center justify-between  md:px-20 lg:px-52 ">
         {/* Logo */}
         <div className="text-2xl font-bold font-serif">Des.</div>
 
         {/*  Desktop Menu  */}
         <div className="hidden md:flex gap-8">
           {menulinks.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className="hover:text-indigo-400 transition"
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:text-sky-400 transition cursor-pointer"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -51,14 +51,14 @@ const Navbar = () => {
         }`}
       >
         {menulinks.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
+          <a
+            key={item.href}
+            href={item.href}
             onClick={() => setOpen(false)}
             className="text-lg hover:text-indigo-400 transition"
           >
             {item.name}
-          </Link>
+          </a>
         ))}
       </div>
     </nav>
